@@ -1,6 +1,7 @@
+
 <head>
-<body>
-     <style>
+<body style="background-color:black;">
+  <style>
     @font-face {
   font-family: 'Font';
   src: url('Font.ttf') format('truetype');
@@ -10,6 +11,7 @@
    color: white;
 }
     </style>
-<h1 style=font-size:Test</h1>
-</body>
+  <title>Bypasses</title>
+<h1 style=font-size:35px>Test</h1>
+  </body>
 </head>
