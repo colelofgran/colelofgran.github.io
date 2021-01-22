@@ -1,12 +1,17 @@
 <head>
 <body>
-    <a>If you click the redirect button below, I will not be held responsible for anything you do with the knowledge the page contains.</a>
-<button id="myButton" class="float-left submit-button" >I agree to the terms</button>
-
-<script type="text/javascript">
-    document.getElementById("myButton").onclick = function () {
-        location.href = "/website.htm";
-    };
+     <style>
+    @font-face {
+  font-family: 'Font';
+  src: url('Font.ttf') format('truetype');
+}
+    h1 {
+  font-family: 'Font';
+   color: white;
+}
+    </style>
+   
+<h1 style=font-size:Test</h1>
 </script>
 </body>
 </head>
