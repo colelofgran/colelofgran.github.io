@@ -12,7 +12,6 @@
 }
     </style>
   <title>Redirecting</title>
-  <h1 style=font-size:35px>REDIRECTING...</h1>
   </body>
 </head>
  
