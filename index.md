@@ -10,8 +10,6 @@
    color: white;
 }
     </style>
-   
 <h1 style=font-size:Test</h1>
-</script>
 </body>
 </head>
