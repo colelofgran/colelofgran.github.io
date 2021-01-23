@@ -8,7 +8,7 @@
 }
     h1 {
   font-family: 'Font';
-   color: white;
+   color: #c0c0c0;
 }
     </style>
   <title>Redirecting</title>
