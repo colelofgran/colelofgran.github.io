@@ -1,6 +1,6 @@
 <head>
 <body style="background-color:black;">
-  <meta http-equiv = "refresh" content = "2; url = /start.htm" />
+  <meta http-equiv = "refresh" content = "2; url = start.htm" />
   <style>
     @font-face {
   font-family: 'Font';
