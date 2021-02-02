@@ -1,6 +1,7 @@
 <head>
 
   <body>
+  <link rel="shortcut icon" href="x.ico" type="image/x-icon" />
   <style>
     @font-face {
   font-family: 'Font';
