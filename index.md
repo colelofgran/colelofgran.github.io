@@ -13,6 +13,6 @@
     </style>
   <title>Fun while iit lasted.</title>
   </body>
-  <h1>I really loved this website, but I'd hate to get in trouble again. I make a new one, maybe next year.
+  <h1>I really loved this website, but I'd hate to get in trouble again. I'll make a new one, maybe next year.
 </head>
  
