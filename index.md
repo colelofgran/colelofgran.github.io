@@ -1,6 +1,6 @@
 <head>
-<body style="background-color:black;">
-  <meta http-equiv = "refresh" content = "2; url = start.htm" />
+
+  
   <style>
     @font-face {
   font-family: 'Font';
@@ -11,7 +11,8 @@
    color: #c0c0c0;
 }
     </style>
-  <title>Redirecting</title>
+  <title>Fun while iit lasted.</title>
   </body>
+  <h1>I really loved this website, but I'd hate to get in trouble again. I make a new one, maybe next year.
 </head>
  
