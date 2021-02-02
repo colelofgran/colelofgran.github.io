@@ -13,6 +13,6 @@
     </style>
   <title>Fun while it lasted.</title>
   </body>
-  <h1>I really loved this website, but I'd hate to get in trouble again. I'll make a new one, maybe next year.</h1>
+  <h1>I really loved this website, but I'd hate to get in trouble again. I'll make a new one, maybe next year. I enjoyed it alot though. This wont be the last of my websites.</h1>
 </head>
  
