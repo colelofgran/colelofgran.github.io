@@ -4,7 +4,7 @@
   <style>
     @font-face {
   font-family: 'Font';
-  src: url('Font.ttf') format('truetype');
+  src: url('font.ttf') format('truetype');
 }
     h1 {
   font-family: 'Font';
