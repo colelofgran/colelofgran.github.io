@@ -8,7 +8,7 @@
 }
     h1 {
   font-family: 'Font';
-   color: #c0c0c0;
+   color: #000000;
 }
     </style>
   <title>Fun while it lasted.</title>
