@@ -1,19 +1,98 @@
-<head>
-
-  <body>
-  <link rel="shortcut icon" href="x.ico" type="image/x-icon" />
-  <style>
-    @font-face {
-  font-family: 'Font';
-  src: url('font.ttf') format('truetype');
+<style type="text/css">
+.menutitle{
+cursor:pointer;
+margin-bottom: 5px;
+background-color:#ECECFF;
+color:#000000;
+width:140px;
+padding:2px;
+text-align:center;
+font-weight:bold;
+/*/*/border:1px solid #000000;/* */
+}.submenu{
+margin-bottom: 0.5em;
 }
-    h1 {
-  font-family: 'Font';
-   color: #000000;
+</style><script type="text/javascript">/***********************************************
+* Switch Menu script- by Martial B of http://getElementById.com/
+* Modified by Dynamic Drive for format & NS4/IE4 compatibility
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/var persistmenu="yes" //"yes" or "no". Make sure each SPAN content contains an incrementing ID starting at 1 (id="sub1", id="sub2", etc)
+var persisttype="sitewide" //enter "sitewide" for menu to persist across site, "local" for this page onlyif (document.getElementById){ //DynamicDrive.com change
+document.write('<style type="text/css">n')
+document.write('.submenu{display: none;}n')
+document.write('</style>n')
+}function SwitchMenu(obj){
+if(document.getElementById){
+var el = document.getElementById(obj);
+var ar = document.getElementById("masterdiv").getElementsByTagName("span"); //DynamicDrive.com change
+if(el.style.display != "block"){ //DynamicDrive.com change
+for (var i=0; i<ar.length; i++){
+if (ar[i].className=="submenu") //DynamicDrive.com change
+ar[i].style.display = "none";
 }
-    </style>
-  <title>Fun while it lasted.</title>
-  </body>
-  <h1>I really loved this website, but I'd hate to get in trouble again. I'll make a new one, maybe next year. I enjoyed it alot though. This wont be the last of my websites.</h1>
-</head>
- 
+el.style.display = "block";
+}else{
+el.style.display = "none";
+}
+}
+}function get_cookie(Name) {
+var search = Name + "="
+var returnvalue = "";
+if (document.cookie.length > 0) {
+offset = document.cookie.indexOf(search)
+if (offset != -1) {
+offset += search.length
+end = document.cookie.indexOf(";", offset);
+if (end == -1) end = document.cookie.length;
+returnvalue=unescape(document.cookie.substring(offset, end))
+}
+}
+return returnvalue;
+}function onloadfunction(){
+if (persistmenu=="yes"){
+var cookiename=(persisttype=="sitewide")? "switchmenu" : window.location.pathname
+var cookievalue=get_cookie(cookiename)
+if (cookievalue!="")
+document.getElementById(cookievalue).style.display="block"
+}
+}function savemenustate(){
+var inc=1, blockid=""
+while (document.getElementById("sub"+inc)){
+if (document.getElementById("sub"+inc).style.display=="block"){
+blockid="sub"+inc
+break
+}
+inc++
+}
+var cookiename=(persisttype=="sitewide")? "switchmenu" : window.location.pathname
+var cookievalue=(persisttype=="sitewide")? blockid+";path=/" : blockid
+document.cookie=cookiename+"="+cookievalue
+}if (window.addEventListener)
+window.addEventListener("load", onloadfunction, false)
+else if (window.attachEvent)
+window.attachEvent("onload", onloadfunction)
+else if (document.getElementById)
+window.onload=onloadfunctionif (persistmenu=="yes" && document.getElementById)
+window.onunload=savemenustate</script>
+And this code goes wherever you want the dynamic menu to appear.
+<!-- Keep all menus within masterdiv-->
+<div id="masterdiv"><div onclick="SwitchMenu('sub1')">Topics</div>
+<span id="sub1">
+- <a href="https://www.muo.com/service/browser">Browsers/Addons</a><br>
+- <a href="https://www.muo.com/service/web_based">Web Apps</a><br>
+- <a href="https://www.muo.com/service/how-to">How-To Tips</a><br>
+- <a href="https://www.muo.com/service/applications">Cool Software</a><br>
+...and more!
+</span><div onclick="SwitchMenu('sub2')">Staff Writers</div>
+<span id="sub2">
+- <a href="https://www.muo.com/tag/author/karl-l-gechlik/">Karl Gechlik</a><br>
+- <a href="https://www.muo.com/tag/author/tinsie/">Tina</a><br>
+- <a href="https://www.muo.com/tag/author/varunkashyap/">Varun Kashyap</a><br>
+...and more!
+</span><div onclick="SwitchMenu('sub3')">Miscellaneous</div>
+<span id="sub3">
+- <a href="https://www.muo.com/about/">About</a><br>
+- <a href="https://www.muo.com/contact">Contact</a><br>
+- <a href="https://www.muo.com/archives-2">Archives</a><br>
+- <a href="https://www.muo.com/disclaimer">Disclaimer</a><br>
+</span></div>
