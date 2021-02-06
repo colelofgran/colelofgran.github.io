@@ -1,0 +1,41 @@
+<! DOCTYPE html>
+<html>
+<head lang = "en">
+    <meta charset = "UTF-8" />
+    <title> Chat with a stranger | Anonymous chat </title>
+    <meta name = "keywords" content = "anonymous chat, chat with a stranger" />
+    <meta name = "description" content = "Anonymous chat with a stranger" />
+    <link rel = "SHORTCUT ICON" href = "// anon.chatovod.ru/favicon.ico" />
+    <link rel = "stylesheet" href = "css/style.css" />
+</head>
+<body> <! - LiveInternet counter -> <script type = "text / javascript"> <! -
+new Image (). src = "//counter.yadro.ru/hit;chatovod?r"+
+        escape (document.referrer) + ((typeof (screen) == "undefined")? "":
+        "; s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth?
+        screen.colorDepth: screen.pixelDepth)) + "; u" + escape (document.URL) +
+        ";" + Math.random (); // -> </script> <! - / LiveInternet ->
+<form method = "get" action = "" id = "form">
+    <div id = "container">
+        <div id = "title">
+            <h1> Chat with a stranger </h1>
+        </div>
+      
+<div id = "messages">
+            <div id = "writing" style = "display: none;"> A stranger is writing ... </div>
+        </div>
+        <div id = "message">
+            <input type = "text" name = "text" disabled = "disabled" placeholder = "Your message ..." autocomplete = "off" id = "text" />
+        </div>
+        <div id = "send">
+            <button type = "submit" id = "sendButton" disabled = "disabled"> Submit </button>
+        </div>
+        <div id = "next">
+            <button type = "button" id = "nextButton" disabled = "disabled"> Next </button>
+        </div>
+    </div>
+</form>
+<script src = "js/jquery-1.11.1.min.js"> </script>
+<script src = "js/sockjs-0.3.4.js"> </script>
+<script src = "js/main.js? 4"> </script>
+</body>
+</html>
