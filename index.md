@@ -1,1 +1,1 @@
-<meta http-equiv="refresh" content="2;url=index.html" />
+<meta http-equiv="refresh" content="2;url=start.htm" />
