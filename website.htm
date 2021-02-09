@@ -1,5 +1,276 @@
-<head>
-<body style="background-color:black;">
+
+	<script type="text/javascript">
+	onerror = function(msg,url,l){
+		var txt="_s=5b5e9db0aec477a3e701f61252e3b064&_r=img";
+		txt+="&Msg="+escape(msg);
+		txt+="&URL="+escape(url);
+		txt+="&Line="+l;
+		txt+="&Platform="+escape(navigator.platform);
+		txt+="&UserAgent="+escape(navigator.userAgent);
+		var i = document.createElement("img");
+		i.setAttribute("src", (("https:" == document.location.protocol) ? "https://errorstack.appspot.com" : "http://www.errorstack.com") + "/submit?" + txt);
+		document.body.appendChild(i);
+	}
+	</script>
+
+<script language="JavaScript" type="text/javascript" src="/smsweb/20200501/js/scriptaculous-js-1.8.0/lib/prototype.js"></script>
+<script language="JavaScript" type="text/javascript" src="/smsweb/20200501/js/cookie.js"></script>
+ 
+ 
+ 
+
+
+ <meta name="description" content="Jura Coffee Machine - San Luis Obispo County Integrated Waste Management Authority Surplus">
+ <script language="JavaScript" type="text/javascript" src="/smsweb/20200501/js/cookie.js"></script>
+ <script language="JavaScript" type="text/javascript" src="/smsweb/20200501/js/scriptaculous-js-1.8.0/src/effects.js"></script>
+ <script language="JavaScript" type="text/javascript" src="/smsweb/20200501/js/lightbox-1.2.js"></script>
+ 
+ <link href="/smsweb/20200501/styles/modal.css" rel="stylesheet" type="text/css" />
+ <link href="/smsweb/20200501/styles/lightbox-1.2.css" rel="stylesheet" type="text/css" />
+ <link href="/smsweb/20200501/styles/diff.css" rel="stylesheet" type="text/css" />
+ 
+<script type="text/javascript">
+
+function Auction_PopupWindow(thispage, name, params) {
+if (name == null) { name = "pop"; }
+ thiswindow = window.open(thispage,'psw_'+name,params);
+}
+function loggingOut() {
+ if (confirm('Are you sure you want to logout?')) {
+   self.location.href="/sms/login/logout";
+ }
+}
+function loggingIn() {
+  var currLoc;
+  if (self.location.pathname && self.location.pathname.indexOf("/login/") < 0 && self.location.pathname.indexOf("/about/") < 0) {
+    currLoc = "?&dst=" + escape(self.location.pathname.substring("/sms".length) + self.location.search.replace(/\?_mls=(f|m)/, "").replace(/&_mls=(f|m)/, ""));
+  }
+  else {
+    currLoc = "";
+  }
+  self.location.href="/sms/login/login" + currLoc;
+}
+
+ function showPasswordModal(width, height){
+ 	sm('box',width, height)
+ }
+ 
+ function searchCommunity(serviceId){
+ 	Auction_PopupWindow('/sms/community/searchProfiles?posting=true&serviceId=' + serviceId + '&milesLocation=50&zipCode=93401&showpopup=true','shippers','width=850,height=500,scrollbars=yes,resizable=yes,menubar=yes')
+ }
+ 
+ function loadDescDiff(addendumId){
+ 	Auction_PopupWindow('/sms/auction/loadDiff?addendumId=' + addendumId+'&auc=2718925','addendum','width=850,height=500,scrollbars=yes,resizable=yes,menubar=yes')
+ }
+
+function formatTitle() {
+  var titleDiv = document.getElementById("auctionTitleLeftColumn");
+  var textProperty = ('innerText' in titleDiv)? 'innerText' : 'textContent';
+  titleDiv[textProperty] = titleDiv[textProperty].replace(/(\W)(?=\S{10,})/g, "\u200b$1");
+}
+ 
+ function onLoad(){
+	
+			formatTitle();
+	Lightbox.initialize({
+	animate:false,
+	resizeSpeed:10,
+	showGroupName:false, 
+	strings : {
+		closeLink : '[Close]',
+		loadingMsg : 'loading',nextLink : '[Next &raquo;]',
+		prevLink : '[&laquo; Prev]',
+		startSlideshow : '[Start Slideshow]',
+		stopSlideshow : '[Stop Slideshow]',
+		numDisplayPrefix : 'Image',numDisplaySeparator : 'of', 
+		description : 'Description'
+	}, 
+	closeImage : '/smsweb/20200501/images/closeLightbox.png',
+	blankImage : '/smsweb/20200501/images/spacer.gif',
+	rotateLeftImage : '/smsweb/20200501/images/rotateLeft.png',
+	rotateRightImage : '/smsweb/20200501/images/rotateRight.png',
+	fullScreenImage : '/smsweb/20200501/images/fullScreen.png',
+	closeFromFullScreenImage : '/smsweb/20200501/images/closeFromFullScreen.png',
+	undoFullScreenImage : '/smsweb/20200501/images/undoFullScreen.png',
+	fullScreenRotateLeftImage : '/smsweb/20200501/images/fullScreenRotateLeft.png',
+	fullScreenRotateRightImage : '/smsweb/20200501/images/fullScreenRotateRight.png',
+	urlAjax : '/sms/aet/ajax',
+	txnId : '',
+	isIE8 : false,
+	isIE10Plus : false,
+	showEditDescription : false
+		,lightboxWidth : 1024,lightboxHeight : 768, fullscreenWidth: 1024, fullscreenHeight: 768, enableFullScreen: false, enableSlideshow:false, enableSlideshowFullScreen:false,enableZoom:true
+	,coldscreen: '',
+	auctionid:'2718925'
+});
+
+ }
+ 
+ function toggleDiffView(preffix, addLink) {
+ 	$(preffix+'_normal').toggle();
+ 	$(preffix+'_diff').toggle();
+ 	if (!addLink) {
+ 		Element.insert($(preffix+'_normal_title'), new Element('span', { 'class': 'foo', onclick: "toggleDiffView('"+ preffix +"',true)" }).update("<br/>[<span class='linklike'>View Highlighted</span>]")); 
+ 	}
+ }
+
+function checkzip(zippy){
+	zippy=zippy.replace(/^\s+/,"").replace(/\s+$/,"");
+	if(zippy.length==0){
+		return false;
+	}
+	return (/^([0-9]){5,5}$|(([0-9]){5,5}(-| ){1}([0-9]){4,4}$)/).test(zippy)
+}
+
+function checkuship(zippy,tForm) {
+	if (!checkzip(zippy)) {
+		alert("Please Enter a valid zip code");
+		return false;
+	}
+	tForm.form.submit();
+}
+
+
+function showVINInfo(vin) {
+	new Ajax.Updater("vinInfoModal", '/sms/auction/vinInfo', {
+   		parameters : {vin : vin}, 
+		onComplete: function(transport) {
+			sm('vinInfoModal', 620, 580);
+		 }
+  	});
+}
+
+
+
+
+   	function acceptCookies() 
+	{
+		var aYearFromNow = new Date();
+		aYearFromNow.setFullYear(aYearFromNow.getFullYear() + 1);
+		
+		$('cookiesAcceptedDiv').hide();
+		setCookie("cookiesAccepted_1", "Y", aYearFromNow, '/');
+	}
+</script>
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-389853-1']);
+	  _gaq.push(['_setDomainName', 'www.publicsurplus.com']);
+	  _gaq.push(['_setAllowLinker', true]);
+	  _gaq.push(['_setAllowHash', false]);
+	  _gaq.push(['_trackPageview']); 
+	 
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })(); 
+	 
+	</script>
+
+
+		 
+   <script language="JavaScript" type="text/javascript">
+function sendOffer() {
+ // testing to see if the user has cookies enabled
+ if (testCookie() == true) {
+	if ($('quantity') != null) {
+		$('quantity').name = "quantity";
+	}
+	if ($('quantityBin') != null) {
+		$('quantityBin').name = "quantity_novalid";
+	}
+	
+ 	document.theform.submit();
+ }
+ else {
+  document.location.href = "/sms/help/public/enable_cookies.html";
+ }
+}
+
+</script>
+
+   
+		<script type="text/javascript">
+		<!--
+			/* Modal Dialog Box */
+			var Modal = {
+				pageWidth: function() { return window.innerWidth != null? window.innerWidth: document.documentElement && document.documentElement.clientWidth ? document.documentElement.clientWidth:document.body != null? document.body.clientWidth:null; },
+				pageHeight: function() { return window.innerHeight != null? window.innerHeight: document.documentElement && document.documentElement.clientHeight ? document.documentElement.clientHeight:document.body != null? document.body.clientHeight:null; },
+				posLeft: function() { return typeof window.pageXOffset != 'undefined' ? window.pageXOffset:document.documentElement && document.documentElement.scrollLeft? document.documentElement.scrollLeft:document.body.scrollLeft? document.body.scrollLeft:0; },
+				posTop: function() { return typeof window.pageYOffset != 'undefined' ? window.pageYOffset:document.documentElement && document.documentElement.scrollTop? document.documentElement.scrollTop: document.body.scrollTop?document.body.scrollTop:0; },
+				scrollFix: function() { var obol=document.getElementById('modal-overlay-mask'); obol.style.top=Modal.posTop()+'px'; obol.style.left=Modal.posLeft()+'px'; },
+				sizeFix: function() { var obol=document.getElementById('modal-overlay-mask'); obol.style.height=Modal.pageHeight()+'px'; obol.style.width=Modal.pageWidth()+'px'; },
+				kp: function(e) { ky=e?e.which:event.keyCode; if(ky==88||ky==120) Modal.hm(); return false; },
+				inf: function(h) { tag=document.getElementsByTagName('select'); for(i=tag.length-1;i>=0;i--) tag[i].style.visibility=h; tag=document.getElementsByTagName('iframe'); for(i=tag.length-1;i>=0;i--) { if (tag[i].id=="modalIframe") continue; tag[i].style.visibility=h; } tag=document.getElementsByTagName('object'); for(i=tag.length-1;i>=0;i--) tag[i].style.visibility=h; },
+				sm: function(obl, wd, ht) {var obbx=document.getElementById('modal-mbox');if (wd==null)wd=obbx.offsetWidth;if (ht==null)ht=obbx.offsetHeight;var h='hidden'; var ta='block'; var b='block'; var p='px'; var obol=document.getElementById('modal-overlay-mask');  var obbxd = document.getElementById('modal-mbd'); obbxd.innerHTML = document.getElementById(obl).innerHTML; obol.style.display=b; var tp=Modal.posTop()+((Modal.pageHeight()-ht)/2)-12; var lt=Modal.posLeft()+((Modal.pageWidth()-wd)/2)-12; obbx.style.top=(tp<0?0:tp)+p; obbx.style.left=(lt<0?0:lt)+p; obbx.style.width=wd+p; obbx.style.height=ht+p; Modal.inf(h); obbx.style.display=ta; Modal.sizeFix(); return false; },
+				smDynamic: function(obl) {var obbx=document.getElementById('modal-mbox');var h='hidden'; var b='block'; var p='px'; var obol=document.getElementById('modal-overlay-mask');  var obbxd = document.getElementById('modal-mbd'); obbxd.innerHTML = document.getElementById(obl).innerHTML; obol.style.display=b;Modal.inf(h);obbx.style.position="absolute";if(navigator.appName == "Microsoft Internet Explorer"){obbx.style.marginTop="18%";obbx.style.marginLeft="30%";}else{obbx.style.marginTop="10%";obbx.style.marginLeft="30%";}b;obbx.style.display=b; return false; },
+				hm: function() { var v='visible'; var n='none'; document.getElementById('modal-overlay-mask').style.display=n; document.getElementById('modal-mbox').style.display=n; Modal.inf(v); document.onkeypress=''; },
+				initmb: function() { var ab='absolute'; var n='none'; var obody=document.getElementsByTagName('body')[0]; var frag=document.createDocumentFragment(); var obol=document.createElement('div'); obol.className="olClass"; obol.id="modal-overlay-mask"; obol.style.display=n; obol.style.position=ab; obol.style.top=0; obol.style.left=0; obol.style.zIndex=998; obol.style.width='100%'; frag.appendChild(obol); var obbx=document.createElement('div'); obbx.className="mboxClass"; obbx.id="modal-mbox"; obbx.style.display=n; obbx.style.position=ab; obbx.style.zIndex=999; var obl=document.createElement('span'); obbx.appendChild(obl); var obbxd=document.createElement('div'); obbxd.id="modal-mbd"; obbxd.className="mbdClass"; obl.appendChild(obbxd); frag.insertBefore(obbx,obol.nextSibling); obody.insertBefore(frag,obody.firstChild); window.onscroll=Modal.scrollFix; window.onresize=Modal.sizeFix; },
+				smAjax: function(obl, url, wd, ht) {new Ajax.Updater({success : "nested_"+obl}, url, {evalScripts: true, onFailure: function(){alert("Error contacting server");}, onSuccess: function(){ if (wd == null) { smDynamic(obl); } else { sm(obl, wd, ht)} } });},
+				smAjaxGet: function(obl, url, wd, ht) {new Ajax.Updater({success : "nested_"+obl}, url, {method: 'get', evalScripts: true, onFailure: function(){alert("Error contacting server");}, onSuccess: function(){ if (wd == null) { smDynamic(obl); } else { sm(obl, wd, ht)} } });}
+			};
+			var smAjax = Modal.smAjax;
+			var sm = Modal.sm;
+			var smDynamic = Modal.smDynamic;
+			var hm = Modal.hm;
+			var smAjaxGet = Modal.smAjaxGet;
+			window.onload = function() {  Modal.initmb(); try { onLoad(); } catch (err) {/*ignored*/}  }
+		-->
+		</script>
+<div>
+  <h1 style=font-size:35px>Games<h1>
+</div>
+       <div> 
+         &nbsp;&nbsp;
+         <a href="javascript:Auction_PopupWindow('/games/bomberman.html','mapit','width=700,height=500,scrollbars=yes,resizable=yes,menubar=yes');" style="text-decoration:none;font-weight:normal;">Bomberman</a>
+       </div>
+ <div> 
+         &nbsp;&nbsp;
+         <a href="javascript:Auction_PopupWindow('/games/breakout.html','mapit','width=700,height=500,scrollbars=yes,resizable=yes,menubar=yes');" style="text-decoration:none;font-weight:normal;">Breakout</a>
+       </div>
+       <div> 
+         &nbsp;&nbsp;
+         <a href="javascript:Auction_PopupWindow('/games/frogger.html','mapit','width=700,height=500,scrollbars=yes,resizable=yes,menubar=yes');" style="text-decoration:none;font-weight:normal;">Pong</a>
+       </div>
+       <div> 
+         &nbsp;&nbsp;
+         <a href="javascript:Auction_PopupWindow('/games/pong.html','mapit','width=700,height=500,scrollbars=yes,resizable=yes,menubar=yes');" style="text-decoration:none;font-weight:normal;">Pong</a>
+       </div>
+       <div> 
+         &nbsp;&nbsp;
+         <a href="javascript:Auction_PopupWindow('/games/snake.html','mapit','width=700,height=500,scrollbars=yes,resizable=yes,menubar=yes');" style="text-decoration:none;font-weight:normal;">Snake</a>
+       </div>
+       <div> 
+         &nbsp;&nbsp;
+         <a href="javascript:Auction_PopupWindow('/games/sokoban.html','mapit','width=700,height=500,scrollbars=yes,resizable=yes,menubar=yes');" style="text-decoration:none;font-weight:normal;">Sokoban</a>
+       </div>
+       <div> 
+         &nbsp;&nbsp;
+         <a href="javascript:Auction_PopupWindow('/games/tetris.html','mapit','width=700,height=500,scrollbars=yes,resizable=yes,menubar=yes');" style="text-decoration:none;font-weight:normal;">Tetris</a>
+       </div>
+       <div> 
+         &nbsp;&nbsp;
+         <a href="javascript:Auction_PopupWindow('/games/DOOM1.htm','mapit','width=700,height=500,scrollbars=yes,resizable=yes,menubar=yes');" style="text-decoration:none;font-weight:normal;">DOOM</a>
+       </div>
+       <div> 
+         &nbsp;&nbsp;
+         <a href="javascript:Auction_PopupWindow('/games/gol.html','mapit','width=700,height=500,scrollbars=yes,resizable=yes,menubar=yes');" style="text-decoration:none;font-weight:normal;">Conway's Game of Life</a>
+       </div>
+       <div> 
+         &nbsp;&nbsp;
+         <a href="javascript:Auction_PopupWindow('/games/tiles.htm','mapit','width=700,height=500,scrollbars=yes,resizable=yes,menubar=yes');" style="text-decoration:none;font-weight:normal;">Tiles</a>
+       </div>
+       <div> 
+         &nbsp;&nbsp;
+         <a href="javascript:Auction_PopupWindow('/games/mine.htm','mapit','width=700,height=500,scrollbars=yes,resizable=yes,menubar=yes');" style="text-decoration:none;font-weight:normal;">Minesweeper</a>
+       </div>
+	  <div> 
+         &nbsp;&nbsp;
+         <a href="javascript:Auction_PopupWindow('/games/minecraft.html','mapit','width=700,height=500,scrollbars=yes,resizable=yes,menubar=yes');" style="text-decoration:none;font-weight:normal;">Minecraft</a>
+       </div>
+       <body style="background-color:black;">
   <style>
     @font-face {
   font-family: 'Font';
@@ -17,19 +288,6 @@
        text-decoration:none;
 }
     </style>
-  <title>Cole Lofgran</title>
-  <h1 style=font-size:35px>Index<h1>
-    <div>
-<a href="/logs/loghub.htm">Logs</a>
-    </div>
-    <div>
-    <a href="/games/games.html">Games</a>
-      </div>
-     <div>
-    <a href="/toys/toyhub.htm">Toys</a>
-      </div>
-       <div>
-    <a href="palindrome.htm">i like palindromes</a>
-      </div>
-  </body>
-</head>
+  <title>Games</title>
+</body>
+</html>
