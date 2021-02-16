@@ -1,1 +1,1 @@
-<meta http-equiv="refresh" content="2;url=start.htm" />
+ <meta http-equiv = "refresh" content = "3; url = https://colelofgran.glitch.me" />
